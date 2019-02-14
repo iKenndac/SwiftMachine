@@ -53,4 +53,9 @@ open class StateMachine<State: StateMachineDataSource> {
         stateListener.stateChanged(for: self)
     }
 
+    public func removeListener<T: StateListener>(_ stateListener: T) {
+        listeners.removeNilValues()
+        listeners.removeObject(stateListener)
+    }
+
 }
