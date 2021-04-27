@@ -13,7 +13,7 @@ public protocol StateMachineDataSource {
 }
 
 
-public protocol StateListener: class {
+public protocol StateListener: AnyObject {
     func stateChanged<T: StateMachineDataSource>(for stateMachine: StateMachine<T>)
 }
 
